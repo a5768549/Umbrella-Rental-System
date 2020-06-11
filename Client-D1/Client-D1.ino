@@ -2,7 +2,7 @@
  * Umbrella Rental System
  * Copyright 2020 a5768549
  *
- * Client D
+ * Client D(ESP32)
  * This code responsible for return umbrella
  * "Return" divided into two stages(C and D)
  * D is responsible for deducting money from RFID card and tell server about the rental status

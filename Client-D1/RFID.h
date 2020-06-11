@@ -53,6 +53,18 @@ long money_dec(byte *buffer ,byte bufferSize)
   return money;
 }
 
+//show on serial
+long dump_byte_array_RW(byte *buffer, byte bufferSize) 
+{
+  for (byte i = 0; i < bufferSize; i++) 
+  {
+      Serial.print(buffer[i] < 0x10 ? " 0" : " ");
+      Serial.print(buffer[i], HEX);
+  }
+  long money = money_dec(buffer,bufferSize);
+  return money;
+}
+
 //Get RFID uuid
 void read_RFID()
 {
